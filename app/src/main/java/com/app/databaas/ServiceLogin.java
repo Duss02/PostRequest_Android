@@ -22,11 +22,10 @@ public class ServiceLogin extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... params) {
         res = null;
         PutUtility put = new PutUtility();
-
+        //set Params of your choice with label
         put.setParam("Email", params[0].toString());
         put.setParam("Password", params[1].toString());
         put.setParam("Name", params[2].toString());
-
 
         try {
             res = put.postData("https://www.youurl.com");
